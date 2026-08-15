@@ -1,0 +1,53 @@
+Loading dataset: /home/ubuntu/ml-benchmark/creditcard.csv
+Rows: train=182,276, validation=45,569, test=56,962 | fraud ratio in train=0.172815%
+Training LightGBM...
+Training until validation scores don't improve for 100 rounds
+[50]	validation's average_precision: 0.819823
+[100]	validation's average_precision: 0.825636
+[150]	validation's average_precision: 0.828579
+[200]	validation's average_precision: 0.830942
+[250]	validation's average_precision: 0.833934
+[300]	validation's average_precision: 0.835244
+[350]	validation's average_precision: 0.836311
+[400]	validation's average_precision: 0.838283
+[450]	validation's average_precision: 0.839424
+[500]	validation's average_precision: 0.839611
+[550]	validation's average_precision: 0.840452
+[600]	validation's average_precision: 0.840199
+[650]	validation's average_precision: 0.841196
+[700]	validation's average_precision: 0.841569
+[750]	validation's average_precision: 0.842655
+[800]	validation's average_precision: 0.842855
+[850]	validation's average_precision: 0.843053
+[900]	validation's average_precision: 0.843355
+[950]	validation's average_precision: 0.843885
+[1000]	validation's average_precision: 0.843747
+[1050]	validation's average_precision: 0.843889
+[1100]	validation's average_precision: 0.844
+[1150]	validation's average_precision: 0.844311
+[1200]	validation's average_precision: 0.844138
+[1250]	validation's average_precision: 0.844288
+[1300]	validation's average_precision: 0.844365
+[1350]	validation's average_precision: 0.844447
+[1400]	validation's average_precision: 0.845037
+[1450]	validation's average_precision: 0.844902
+Early stopping, best iteration is:
+[1394]	validation's average_precision: 0.845054
+Evaluated only: average_precision
+Benchmarking inference...
+
+=== BENCHMARK RESULT ===
+Data load:                 2.4717 s
+Training:                  44.5451 s
+Best iteration:            1394
+Decision threshold:        0.578411
+AUC-ROC:                   0.972610
+PR-AUC:                    0.877630
+Majority baseline accuracy: 0.998280
+Accuracy:                  0.999561
+F1-score:                  0.861878
+Precision:                 0.939759
+Recall:                    0.795918
+Inference latency (1 row): 0.800677 ms (median)
+Throughput (1000 rows):    11484.80 rows/s
+Result file:               /home/ubuntu/ml-benchmark/benchmark_result.json

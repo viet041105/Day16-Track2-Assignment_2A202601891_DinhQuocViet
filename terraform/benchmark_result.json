@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-08-15T03:22:30.610312+00:00",
+  "summary": {
+    "data_load_seconds": 2.4717072440034826,
+    "training_seconds": 44.5450571399997,
+    "best_iteration": 1394,
+    "auc_roc": 0.9726102666727917,
+    "accuracy": 0.9995611109160493,
+    "f1_score": 0.861878453038674,
+    "precision": 0.9397590361445783,
+    "recall": 0.7959183673469388,
+    "inference_latency_1_row_ms": 0.800677,
+    "inference_throughput_1000_rows_per_second": 11484.8
+  },
+  "timings_seconds": {
+    "data_load": 2.4717072440034826,
+    "data_preparation_and_split": 0.20047365600476041,
+    "training": 44.5450571399997
+  },
+  "dataset": {
+    "path": "/home/ubuntu/ml-benchmark/creditcard.csv",
+    "feature_count": 30,
+    "feature_names": [
+      "Time",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17",
+      "V18",
+      "V19",
+      "V20",
+      "V21",
+      "V22",
+      "V23",
+      "V24",
+      "V25",
+      "V26",
+      "V27",
+      "V28",
+      "Amount"
+    ],
+    "train_rows": 182276,
+    "validation_rows": 45569,
+    "test_rows": 56962,
+    "train_fraud_rows": 315,
+    "train_normal_rows": 181961
+  },
+  "training": {
+    "best_iteration": 1394,
+    "validation_best_f1": 0.8591549295774649,
+    "class_imbalance_ratio": 577.6539682539683,
+    "imbalance_strategy": "Unweighted training plus F1-optimal threshold selected only on the validation set",
+    "parameters": {
+      "objective": "binary",
+      "metric": "None",
+      "n_estimators": 2000,
+      "learning_rate": 0.03,
+      "num_leaves": 31,
+      "max_depth": -1,
+      "min_child_samples": 40,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.9,
+      "reg_alpha": 0.1,
+      "reg_lambda": 1.0,
+      "random_state": 42,
+      "n_jobs": 2,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    }
+  },
+  "test_metrics": {
+    "auc_roc": 0.9726102666727917,
+    "pr_auc": 0.8776300865517924,
+    "majority_class_baseline_accuracy": 0.9982795547909132,
+    "accuracy": 0.9995611109160493,
+    "f1_score": 0.861878453038674,
+    "precision": 0.9397590361445783,
+    "recall": 0.7959183673469388,
+    "decision_threshold": 0.5784112667022463,
+    "confusion_matrix": {
+      "true_negative": 56859,
+      "false_positive": 5,
+      "false_negative": 20,
+      "true_positive": 78
+    }
+  },
+  "inference": {
+    "single_row_latency_ms_median": 0.800677,
+    "single_row_latency_ms_p95": 0.81653,
+    "single_row_repetitions": 1000,
+    "batch_size": 1000,
+    "batch_latency_ms_median": 87.071623,
+    "batch_throughput_rows_per_second": 11484.8,
+    "batch_repetitions": 30,
+    "warmup_enabled": true
+  },
+  "environment": {
+    "python": "3.10.12",
+    "platform": "Linux-6.8.0-1061-aws-x86_64-with-glibc2.35",
+    "logical_cpu_count": 2,
+    "configured_threads": 2,
+    "lightgbm": "4.7.0",
+    "scikit_learn": "1.7.2",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6"
+  }
+}
